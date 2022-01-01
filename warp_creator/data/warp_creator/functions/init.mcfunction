@@ -1,2 +1,2 @@
-scoreboard players set #world warp.0 0
-scoreboard players set #world warp.255 255
+scoreboard players set #0 warp 0
+scoreboard players set #255 warp 255

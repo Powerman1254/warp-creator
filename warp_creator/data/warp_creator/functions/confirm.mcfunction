@@ -1,1 +1,1 @@
-tellraw @a {"text":"Load succesfull","bold":true,"color":"gold"}
+tellraw @a ["",{"text":"Load succesfull","bold":true,"color":"gold"},{"text":"\nFor help type "},{"text":"/function warp_creator:help","clickEvent":{"action":"run_command","value":"/function warp_creator:help"}}]

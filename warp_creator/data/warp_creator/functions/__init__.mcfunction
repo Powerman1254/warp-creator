@@ -1,3 +1,4 @@
+scoreboard objectives add drawer dummy
 scoreboard objectives add min_x dummy
 scoreboard objectives add max_x dummy
 scoreboard objectives add min_y dummy
@@ -8,8 +9,7 @@ scoreboard objectives add UUID0 dummy
 scoreboard objectives add UUID1 dummy
 scoreboard objectives add UUID2 dummy
 scoreboard objectives add UUID3 dummy
-scoreboard objectives add warp.0 dummy
-scoreboard objectives add warp.255 dummy
+scoreboard objectives add warp dummy
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy
 scoreboard objectives add z dummy
@@ -30,5 +30,4 @@ scoreboard objectives add pos1 trigger
 scoreboard objectives add pos2 trigger
 scoreboard objectives add pos3 trigger
 scoreboard objectives add reset trigger
-scoreboard objectives add drawer dummy
 scoreboard objectives add sandstone dummy [{"text":"Sandstone","color":"gold"}," internals"]
