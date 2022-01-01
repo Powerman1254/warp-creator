@@ -1,0 +1,20 @@
+{
+  "pack": {
+    "pack_format": 7,
+    "description": [
+      "",
+      {
+        "text": "Warp creator",
+        "bold": true,
+        "color": "dark_red"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "a area creator plugin",
+        "color": "gold"
+      }
+    ]
+  }
+}

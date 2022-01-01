@@ -1,0 +1,1 @@
+execute as @e[tag=Area, tag=!confirmed, type=minecraft:armor_stand] run function warp_creator:area/create/checkstand/execute_as

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "warp_creator:area/create/triggers",
+    "warp_creator:area/create/checkpos",
+    "warp_creator:area/create/confirmpos",
+    "warp_creator:area/create/checkstand",
+    "warp_manager:tick"
+  ]
+}

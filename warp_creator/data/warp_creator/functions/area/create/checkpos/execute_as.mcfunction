@@ -1,0 +1,9 @@
+scoreboard players set cond_1 sandstone 0
+execute unless score @s pos2_x matches 0.. unless score @s pos2_x matches ..0 run scoreboard players set cond_1 sandstone 1
+scoreboard players set cond_2 sandstone 0
+execute unless score @s pos1_x matches ..0 unless score @s pos1_x matches 0.. run scoreboard players set cond_2 sandstone 1
+scoreboard players reset cond_0 sandstone
+execute store success score cond_0 sandstone unless score cond_1 sandstone matches 1 unless score cond_2 sandstone matches 1 unless score @s pos3_x matches ..0 unless score @s pos3_x matches 0.. run title @s actionbar ["","pos1( x: ",{"score":{"name":"@s","objective":"pos1_x"}}," z: ",{"score":{"name":"@s","objective":"pos1_z"}}," ), pos2( x: ",{"score":{"name":"@s","objective":"pos2_x"}}," z: ",{"score":{"name":"@s","objective":"pos2_z"}}," )"]
+scoreboard players set cond_3 sandstone 0
+execute unless score @s pos1_x matches ..0 unless score @s pos1_x matches 0.. unless score @s pos2_x matches 0.. unless score @s pos2_x matches ..0 unless score @s pos3_x matches ..0 unless score @s pos3_x matches 0.. run scoreboard players set cond_3 sandstone 1
+execute unless score cond_3 sandstone matches 1 unless score cond_0 sandstone matches 0.. store success score cond_0 sandstone run title @s actionbar ["","pos1( x: ",{"score":{"name":"@s","objective":"pos1_x"}}," z: ",{"score":{"name":"@s","objective":"pos1_z"}}," ), pos2( x: ",{"score":{"name":"@s","objective":"pos2_x"}}," z: ",{"score":{"name":"@s","objective":"pos2_z"}}," ), pos3( x: ",{"score":{"name":"@s","objective":"pos3_x"}}," z: ",{"score":{"name":"@s","objective":"pos3_z"}},")"]

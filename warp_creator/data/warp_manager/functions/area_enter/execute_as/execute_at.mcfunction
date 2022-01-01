@@ -1,0 +1,1 @@
+execute if score @p x >= @s min_x if score @p x <= @s max_x if score @p z <= @s max_z if score @p z >= @s min_z run function warp_manager:area_enter/execute_as/execute_at/if

@@ -1,0 +1,1 @@
+execute as @e[tag=Area, type=minecraft:armor_stand] run function warp_manager:area_enter/execute_as

@@ -1,0 +1,1 @@
+execute as @a run function warp_creator:area/create/confirmpos/execute_as

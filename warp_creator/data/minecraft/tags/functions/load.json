@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "warp_creator:__init__",
+    "warp_creator:confirm",
+    "warp_creator:init",
+    "warp_manager:init"
+  ]
+}

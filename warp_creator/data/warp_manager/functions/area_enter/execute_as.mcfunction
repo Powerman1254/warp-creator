@@ -1,0 +1,1 @@
+execute at @a run function warp_manager:area_enter/execute_as/execute_at
