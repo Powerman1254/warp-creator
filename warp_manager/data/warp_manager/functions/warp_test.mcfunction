@@ -1,1 +1,1 @@
-execute as @e[tag=Warp, type=minecraft:armor_stand] run function warp_manager:warp_test/execute_as
+execute as @e[tag=Warp, type=minecraft:armor_stand] at @a run function warp_manager:warp_test/execute_as
