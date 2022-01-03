@@ -1,2 +1,2 @@
-scoreboard players set #0 warp 0
-scoreboard players set #255 warp 255
+scoreboard players set #-64 warp -64
+scoreboard players set #319 warp 319

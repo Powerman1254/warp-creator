@@ -2,7 +2,7 @@ scoreboard players reset cond_19 sandstone
 execute if score @s pos1_x = @s pos2_x run function warp_creator:area/create/confirmpos/execute_as/if/else/if
 execute unless score cond_19 sandstone matches 0.. run function warp_creator:area/create/confirmpos/execute_as/if/else/else
 scoreboard players reset cond_21 sandstone
-execute if score #0 warp = #255 warp run function warp_creator:area/create/confirmpos/execute_as/if/else/if_2
+execute if score #0 warp = #319 warp run function warp_creator:area/create/confirmpos/execute_as/if/else/if_2
 execute unless score cond_21 sandstone matches 0.. run function warp_creator:area/create/confirmpos/execute_as/if/else/else_2
 scoreboard players reset cond_23 sandstone
 execute if score @s pos1_z = @s pos2_z run function warp_creator:area/create/confirmpos/execute_as/if/else/if_3

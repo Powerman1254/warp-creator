@@ -13,4 +13,5 @@ scoreboard objectives remove pos2
 scoreboard objectives remove pos3
 scoreboard objectives remove reset
 scoreboard objectives remove drawer
+scoreboard objectives remove remove
 tellraw @s ["",{"text":"Uninstall","bold":true,"color":"gold"},{"text":" successful","bold":true,"color":"dark_green"},{"text":"\nPlease "},{"text":"remove","underlined":true,"color":"dark_red"},{"text":" the "},{"text":"warp creator","underlined":true,"color":"dark_green"},{"text":" namespace "},{"text":"before reloading","bold":true,"underlined":true,"color":"dark_red"},{"text":"\nor the pack will re enable"}]

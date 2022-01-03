@@ -14,7 +14,7 @@ scoreboard players operation @e[tag=Warp, type=minecraft:armor_stand, limit=1, s
 scoreboard players operation @e[tag=Warp, type=minecraft:armor_stand, limit=1, sort=nearest] pos3_z = @s pos3_z
 scoreboard players operation @e[tag=Warp, type=minecraft:armor_stand, limit=1, sort=nearest] pos3_rx = @s pos3_rx
 scoreboard players operation @e[tag=Warp, type=minecraft:armor_stand, limit=1, sort=nearest] pos3_ry = @s pos3_ry
-execute as @e[type=minecraft:armor_stand, sort=nearest, limit=1] at @s run tp 0 0 0
+execute as @e[type=minecraft:armor_stand, sort=nearest, limit=1] at @s run tp 0 -64 0
 execute as @e[type=minecraft:armor_stand, sort=nearest, limit=1] at @s run tag @s add confirmed
 scoreboard players reset @s pos1_x
 scoreboard players reset @s pos2_x
