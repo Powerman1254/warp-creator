@@ -30,4 +30,5 @@ scoreboard objectives add pos1 trigger
 scoreboard objectives add pos2 trigger
 scoreboard objectives add pos3 trigger
 scoreboard objectives add reset trigger
+scoreboard objectives add remove trigger
 scoreboard objectives add sandstone dummy [{"text":"Sandstone","color":"gold"}," internals"]
