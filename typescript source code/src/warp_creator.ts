@@ -154,7 +154,23 @@ MCFunction('warp/create/confirm', () => {
 
 //summon armor stand and give it relevant data
 MCFunction('area/create/confirm', () => {
-    summon('minecraft:armor_stand', relative(0, 0, 0), { CustomNameVisible: NBT.byte(1), NoGravity: NBT.byte(1), Invulnerable: NBT.byte(1) })
+    summon('minecraft:armor_stand', relative(0, 0, 0), {
+        CustomNameVisible: NBT.byte(1),
+        NoGravity: NBT.byte(1),
+        Invulnerable: NBT.byte(1),
+        ArmorItems: [
+            {},
+            {},
+            {},
+            {
+                id: "minecraft:phantom_membrane",
+                count: NBT.byte(1),
+                tag: {
+                    Players: []
+                }
+            }
+        ]
+    })
     tag(Selector('@e', { type: 'minecraft:armor_stand', sort: 'nearest', limit: 1 })).add('Area')
 
     _.if(pos1_x(Selector('@s')).greaterOrEqualThan(pos2_x(Selector('@s'))), () => {

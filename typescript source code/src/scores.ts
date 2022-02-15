@@ -41,4 +41,7 @@ const pos3 = Objective.create('pos3', 'trigger')
 const reset = Objective.create('reset', 'trigger')
 const remove = Objective.create('remove', 'trigger')
 
-export { remove, warp, min_x, max_x, min_y, max_y, min_z, max_z, UUID, x, y, z, pos1, pos1_x, pos1_y, pos1_z, pos2, pos2_x, pos2_y, pos2_z, pos3, pos3_rx, pos3_x, pos3_ry, pos3_y, pos3_z, area_confirm, warp_confirm, reset }
+//internal score
+const temp = Objective.create('temp')
+
+export { temp, remove, warp, min_x, max_x, min_y, max_y, min_z, max_z, UUID, x, y, z, pos1, pos1_x, pos1_y, pos1_z, pos2, pos2_x, pos2_y, pos2_z, pos3, pos3_rx, pos3_x, pos3_ry, pos3_y, pos3_z, area_confirm, warp_confirm, reset }

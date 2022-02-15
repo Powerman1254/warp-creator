@@ -1,5 +1,5 @@
 import { data, execute, kill, loc, MCFunction, rel, Selector, summon, tag, _ } from "sandstone"
-import { max_x, max_y, max_z, min_x, min_y, min_z, pos3_rx, pos3_ry, pos3_x, pos3_y, pos3_z, UUID, x, y, z } from "./scores"
+import { max_x, max_y, max_z, min_x, min_y, min_z, pos3_rx, pos3_ry, pos3_x, pos3_y, pos3_z, temp, UUID, x, y, z } from "./scores"
 
 MCFunction('warp_manager:tick', () => {
     //get players x and z coordinate and store it in scoreboard
@@ -36,23 +36,9 @@ const warp_test = MCFunction('warp_manager:warp_test', () => {
 
 const area_enter = MCFunction('warp_manager:area_enter', () => {
     //test if player is in area and display area name
-    execute.as(Selector('@e', { type: 'minecraft:armor_stand', tag: 'Area' })).run(() => {
-        execute.at(Selector('@a')).run(() => {
-            //test if player is in area
-            _.if(_.and(x(Selector('@p')).greaterOrEqualThan(min_x(Selector('@s'))), _.and(x(Selector('@p')).lessOrEqualThan(max_x(Selector('@s'))), _.and(z(Selector('@p')).lessOrEqualThan(max_z(Selector('@s'))), z(Selector('@p')).greaterOrEqualThan(min_z(Selector('@s')))))), () => {
-                //test if player's last area was the one entered
-                _.if(_.not(_.and(UUID[0](Selector('@s')).equalTo(UUID[0](Selector('@p'))), _.and(UUID[1](Selector('@s')).equalTo(UUID[1](Selector('@p'))), UUID[2](Selector('@s')).equalTo(UUID[2](Selector('@p')))))), () => {
-                    //show area name
-                    data.modify.storage('area_manager:temp', 'CustomName').set.from.entity(Selector('@s'), 'CustomName')
-                    execute.as(Selector('@p')).run.title(Selector('@s')).title({ 'nbt': 'CustomName', 'storage': 'area_manager:temp', 'interpret': true })
-
-                    //add area UUID to player to prevent flashing title
-                    execute.store.result.score(Selector('@p'), UUID[0].name).run.data.get.entity(Selector('@s'), 'UUID[0]')
-                    execute.store.result.score(Selector('@p'), UUID[1].name).run.data.get.entity(Selector('@s'), 'UUID[1]')
-                    execute.store.result.score(Selector('@p'), UUID[2].name).run.data.get.entity(Selector('@s'), 'UUID[2]')
-                    execute.store.result.score(Selector('@p'), UUID[3].name).run.data.get.entity(Selector('@s'), 'UUID[3]')
-                })
-            })
+    execute.as(Selector('@e', { type: 'minecraft:armor_stand', tag: 'Area' })).at(Selector('@a')).run(() => {
+        //test if player is in area
+        _.if(_.and(x(Selector('@p')).greaterOrEqualThan(min_x(Selector('@s'))), _.and(x(Selector('@p')).lessOrEqualThan(max_x(Selector('@s'))), _.and(z(Selector('@p')).lessOrEqualThan(max_z(Selector('@s'))), z(Selector('@p')).greaterOrEqualThan(min_z(Selector('@s')))))), () => {
         })
     })
 })
